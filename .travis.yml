@@ -11,7 +11,7 @@ script:
 before_deploy: 
   echo 'ready?'
   echo 'ready123?'
-# deploy:  
-#   skip_cleanup: true  
-#   provider: AzureWebApps  
-#   verbose: false
+deploy:  
+  skip_cleanup: true  
+  provider: AzureWebApps  
+  verbose: false
