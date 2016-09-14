@@ -3,14 +3,15 @@ node_js:
   - '6'
 before_script:
  - npm install -g gulp   
- - npm install -g typings
- - npm i
+ - npm install -g typings 
  - typings i
 script:
+  - npm i
   - gulp rebuild
 before_deploy: 
   echo 'ready?'
   ls
 deploy:    
-  provider: AzureWebApps  
+  provider: AzureWebApps
+  skip_cleanup: true
   verbose: true
