@@ -10,6 +10,7 @@ script:
   - gulp rebuild
 before_deploy: 
   "echo 'ready?'"
+  "echo 'ready123?'"
 # deploy:  
 #   skip_cleanup: true  
 #   provider: AzureWebApps  
