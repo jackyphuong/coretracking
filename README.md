@@ -7,5 +7,3 @@
 - Run `gulp`
 - Run `gulp serve`
 - Then open the `http://localhost:3000` url from browser
-
-
