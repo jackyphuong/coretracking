@@ -1,0 +1,19 @@
+
+header.navbar a.navbar-brand {
+    display: inline-block;
+    width: 155px;
+    height: 55px;
+    padding: 0;
+    background-color: #fff;
+    background: none;
+    border-bottom: 1px solid #cfd8dc;
+    text-align: center;    
+    text-transform: uppercase;
+    font-size: 1.0rem;
+    font-weight: 600;
+    color: #20a8d8;
+}
+
+.tab-content{
+    padding-top: 10px
+}

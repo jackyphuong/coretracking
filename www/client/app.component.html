@@ -1,0 +1,33 @@
+<header class="navbar">
+    <my-header></my-header>
+</header>
+
+<div class="sidebar">
+    <my-leftmenu></my-leftmenu>
+</div>
+
+<!-- Main content -->
+<main class="main">
+    <!-- Breadcrumb -->
+    <ol class="breadcrumb">
+        <breadcrumbs></breadcrumbs>
+
+        <!-- Breadcrumb Menu-->
+        <li class="breadcrumb-menu">
+            <!--<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                <a class="btn btn-secondary" href="#"><i class="icon-speech"></i></a>
+                <a class="btn btn-secondary" [routerLink]="['/dashboard']"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+                <a class="btn btn-secondary" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
+            </div>-->
+        </li>
+
+    </ol>
+    <div class="container-fluid">
+        <router-outlet></router-outlet>
+    </div>
+    <!-- /.conainer-fluid -->
+</main>
+
+<footer class="footer">
+    <my-footer></my-footer>
+</footer>

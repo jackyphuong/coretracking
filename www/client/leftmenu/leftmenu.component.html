@@ -1,0 +1,33 @@
+<nav class="sidebar-nav">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><i class="icon-speedometer"></i> Dashboard <span class="tag tag-info">NEW</span></a>
+        </li>
+
+        <li class="divider"></li>
+        
+        <li class="nav-item nav-dropdown" routerLinkActive="open">
+            <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-wrench"></i> Administration</a>
+            <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/organizationunits']"><i class="icon-layers"></i> Organization units</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/roles']"><i class="icon-drawer"></i> Roles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/icons/simple-line-icons']"><i class="icon-user"></i> Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/icons/simple-line-icons']"><i class="icon-flag"></i> Languages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/icons/simple-line-icons']"><i class="icon-lock"></i> Audit Logs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/setting']"><i class="icon-settings"></i> Settings</a>
+                </li>
+            </ul>
+        </li>        
+    </ul>
+</nav>

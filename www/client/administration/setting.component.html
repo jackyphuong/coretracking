@@ -1,0 +1,108 @@
+<div class="animated fadein">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>
+                        <strong>Settings</strong>
+                        <small>show and change application settings</small>
+                    </h5>
+                </div>
+                <div class="card-block">
+                    <tabset [justified]="true">
+                        <!--General tab-->
+                        <tab heading="General">
+                            <form>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="timezoneSelect">Timezone</label>
+                                    <select class="form-control" id="timezoneSelect">
+                                        <option label="Default [UTC]" value="string:" selected="selected">Default [UTC]</option>
+                                        <option label="(UTC-12:00) International Date Line West" value="string:Dateline Standard Time">(UTC-12:00) International Date Line West</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                <button class="btn btn-default" type="button">Cancel</button>
+                            </div>
+                        </tab>
+                        <!--User Management tab-->
+                        <tab heading="User Management">
+                            <form class="form-horizontal">
+                                <h5>Form Based Registration</h5>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Allow users to register to the system.
+                                        </label>
+                                    </div>
+                                    <span class="help-block">If you disable this, users will only be added by admin using user management page.</span>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">New registered users are active by default.
+                                        </label>
+                                    </div>
+                                    <span class="help-block">If you disable this, new users will not be active (and can not login) until admin manually activate the account.</span>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Use security image question (captcha) on registration.
+                                        </label>
+                                    </div>
+                                </div>
+                                <h5>Other Setting</h5>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Email confirmation required for login.
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                <button class="btn btn-default" type="button">Cancel</button>
+                            </div>
+                        </tab>
+                        <!--Security tab-->
+                        <tab heading="Security">
+                            <h5>Password Complexity</h5>
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="minPasswordLengthInput">Minimum password length</label>
+                                    <input type="text" class="form-control" id="minPasswordLengthInput">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="maxPasswordLengthInput">Maximum password length</label>
+                                    <input type="text" class="form-control" id="maxPasswordLengthInput">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                            <input type="checkbox" checked=true> Use number in password
+                                        </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                            <input type="checkbox"> Use upper case letters in password
+                                        </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                            <input type="checkbox"> Use lower case letters in password
+                                        </label>
+                                </div>
+                            </form>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                <button class="btn btn-default" type="button">Cancel</button>
+                            </div>
+                        </tab>
+                    </tabset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

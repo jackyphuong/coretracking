@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "body-parser": "registry:npm/body-parser#1.15.2+20160815132839",
+    "express": "registry:npm/express#4.14.0+20160815112707",
+    "jsonwebtoken": "registry:npm/jsonwebtoken#7.1.8+20160811031426",
+    "request": "registry:npm/request#2.69.0+20160428223725"
+  },
+  "globalDependencies": {
+    "core-js": "registry:dt/core-js#0.0.0+20160602141332",
+    "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
+    "node": "registry:dt/node#6.0.0+20160818175514",
+    "serve-favicon": "registry:dt/serve-favicon#0.0.0+20160316155526"
+  }
+}
