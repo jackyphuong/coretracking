@@ -9,8 +9,7 @@ script:
   - npm i
   - gulp rebuild
 before_deploy: 
-  echo 'ready?'
-  ls
+  echo 'ready?'  
 deploy:    
   provider: AzureWebApps
   skip_cleanup: true
