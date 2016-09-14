@@ -6,7 +6,7 @@ before_script:
  - npm install -g typings 
  - typings i
 script:
-  - npm i
+  # - npm i
   - gulp rebuild
 before_deploy: 
   echo 'ready?'  
