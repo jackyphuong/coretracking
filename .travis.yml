@@ -1,17 +1,17 @@
 language: node_js
 node_js:
- - '6'
+  - '6'
 before_script:
- - npm install -g gulp
+ - npm install -g gulp   
  - npm install -g typings
  - npm i
  - typings i
 script:
   - gulp rebuild
 before_deploy: 
-  "echo 'ready?'"
-  "echo 'ready123?'"
+  echo 'ready?'
+  echo 'ready123?'
 # deploy:  
 #   skip_cleanup: true  
 #   provider: AzureWebApps  
-#   verbose: false  
+#   verbose: false
