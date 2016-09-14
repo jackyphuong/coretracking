@@ -15,3 +15,4 @@ deploy:
   provider: AzureWebApps
   skip_cleanup: true
   verbose: true
+  on: master
