@@ -6,12 +6,12 @@ before_script:
  - npm install -g typings 
  - typings i
 script:
-  # - npm i
+  - npm i
   - gulp rebuild
-before_deploy: 
-  echo 'ready?'  
-deploy:    
-  provider: AzureWebApps
-  skip_cleanup: true
-  verbose: true
-  on: master
+# before_deploy: 
+#   rm '-rf node_modules'  
+# deploy:    
+#   provider: AzureWebApps
+#   skip_cleanup: true
+#   verbose: true
+#   on: master

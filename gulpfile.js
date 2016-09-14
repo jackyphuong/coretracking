@@ -102,18 +102,12 @@ gulp.task('serve', ['build:core', 'watch'], function () {
     });
 });
 
-gulp.task('deploy',  function () {
-    var remotePath = '/site/wwwroot/';
-
-    var conn = ftp.create({
-        host: 'waws-prod-ch1-009.ftp.azurewebsites.windows.net',
-        user: 'Coretracking\\deploy_user1',
-        pass: 'Core@123',
-        port: 21,
-        secure:true,
-        log: gutil.log
+gulp.task('serve:prod', function () {
+    nodemon({
+        script: 'dist/server/server.js',
+        ext: 'js',
+    }).on('restart', function () {
+        setTimeout(function () {
+        }, 500);
     });
-    gulp.src(['dist/www/**/*.*'])
-        .pipe(conn.newer(remotePath))
-        .pipe(conn.dest(remotePath));
 });
