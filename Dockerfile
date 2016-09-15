@@ -12,10 +12,9 @@ COPY typings.json /usr/src
 RUN npm i
 RUN typings i
 
-COPY package.json /usr/src
-COPY gulpfile.js /usr/src
-COPY tsconfig.json /usr/src
-COPY typings.json /usr/src
+COPY www /usr/src/www
+COPY server /usr/src/server
+COPY scss /usr/src/scss
 
 RUN gulp
 
