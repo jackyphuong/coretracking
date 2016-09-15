@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, ViewContainerRef  } from '@angular/core';
 //import { HeaderComponent } from './header/header.component';
 
 @Component({
@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
     templateUrl: 'client/app.component.html'
 })
 
-export class AppComponent{}
+export class AppComponent{
+  private viewContainerRef: ViewContainerRef;
 
+  public constructor(viewContainerRef:ViewContainerRef) {
+      // You need this small hack in order to catch application root view container ref
+      this.viewContainerRef = viewContainerRef;
+  }
+}
