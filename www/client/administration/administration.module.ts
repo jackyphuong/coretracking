@@ -1,6 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { CommonModule }  from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ng2BootstrapModule }           from 'ng2-bootstrap/ng2-bootstrap';
 import {AgGridModule} from 'ag-grid-ng2/main';
 
@@ -14,11 +14,12 @@ import { AuditLogComponent } from './auditlog.component';
   imports: [
     CommonModule,
     FormsModule,    
+    ReactiveFormsModule,
     routing,
     Ng2BootstrapModule,
     AgGridModule
   ],
-  declarations: [
+  declarations: [    
     SettingComponent,   
     OrganizationUnitsComponent, 
     RolesComponent,
