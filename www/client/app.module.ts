@@ -17,7 +17,7 @@ import { FooterComponent } from './footer/footer.component';
     imports: [
         BrowserModule,         
         routing,      
-        Ng2BootstrapModule,  
+        Ng2BootstrapModule,
     ],    
     declarations: [
         AppComponent,

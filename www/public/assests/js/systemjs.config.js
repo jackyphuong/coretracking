@@ -73,10 +73,13 @@
             '@angular/router': 'libs:@angular/router/bundles/router.umd.js',
             '@angular/forms': 'libs:@angular/forms/bundles/forms.umd.js',
             // other libraries
-            'rxjs':                       'libs:rxjs',
+            'rxjs': 'libs:rxjs',
             'angular2-in-memory-web-api': 'libs:angular2-in-memory-web-api',
-            'moment':                     'libs:moment/moment.js',
+            'moment': 'libs:moment/moment.js',
             //'ng2-charts':                 'npm:ng2-charts'
+            // ag libraries
+            'ag-grid-ng2': 'libs:ag-grid-ng2',
+            'ag-grid': 'libs:ag-grid',
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -90,6 +93,12 @@
             'angular2-in-memory-web-api': {
                 main: './index.js',
                 defaultExtension: 'js'
+            },
+            'ag-grid-ng2': {
+                defaultExtension: "js"
+            },
+            'ag-grid': {
+                defaultExtension: "js"
             },
             // 'ng2-charts': {
             //     defaultExtension: 'js'
