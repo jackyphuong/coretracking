@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SettingComponent } from './setting.component';
 import { OrganizationUnitsComponent } from './organizationunits.component';
 import { RolesComponent } from './roles.component';
+import { UsersComponent } from './users.component';
 
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
@@ -31,6 +32,13 @@ const routes: Routes = [
                 component: RolesComponent,
                 data: {
                     title: 'Roles'
+                }
+            },
+            {
+                path: 'users',
+                component: UsersComponent,
+                data: {
+                    title: 'Users'
                 }
             }
 

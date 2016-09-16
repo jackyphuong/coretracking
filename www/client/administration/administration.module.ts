@@ -7,18 +7,20 @@ import { routing } from './administration.routing';
 import { SettingComponent } from './setting.component';
 import { OrganizationUnitsComponent } from './organizationunits.component';
 import { RolesComponent } from './roles.component';
+import { UsersComponent } from './users.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,    
+    FormsModule,
     routing,
     Ng2BootstrapModule
   ],
   declarations: [
-    SettingComponent,   
-    OrganizationUnitsComponent, 
-    RolesComponent
+    SettingComponent,
+    OrganizationUnitsComponent,
+    RolesComponent,
+    UsersComponent
   ]
 })
 export default class AdministrationModule {}
