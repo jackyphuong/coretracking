@@ -1,7 +1,9 @@
 var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     ts = require('gulp-typescript'),
-    tsProject = ts.createProject('tsconfig.json'),
+    tsProject = ts.createProject('tsconfig.json',{
+        typescript: require('typescript')
+    }),
     runSequence = require("run-sequence"),
     rimraf = require('gulp-rimraf'),
     sass = require('gulp-sass'),

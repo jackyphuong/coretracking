@@ -1,19 +1,47 @@
-import { Component, ViewChild   } from '@angular/core';
-import { ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { Component, ViewChild, OnInit, AfterViewInit, Output, EventEmitter  } from '@angular/core';
+import { ModalDirective } from 'ng2-bootstrap/ng2-bootstrap';
 
 @Component({
-    selector: 'my-dashboard',
-    templateUrl: 'client/administration/role.component.html'
+  selector: 'my-dashboard',
+  templateUrl: 'client/administration/role.component.html'
 })
 
-export class RolesComponent {
-  @ViewChild('childModal') public childModal:ModalModule;
+export class RolesComponent implements OnInit, AfterViewInit {
+  @ViewChild(ModalDirective) myModal: ModalDirective;
+  @Output('dialogResult') DialogResult: EventEmitter<string> = new EventEmitter<string>();
 
-  public showChildModal():void {
-    this.childModal.show();
+  constructor() {
+    console.log("myModal constructor");
   }
 
-  public hideChildModal():void {
-    this.childModal.hide();
+  public ok() {
+    this.myModal.hide();
+    this.DialogResult.emit("ok");
+    console.log("ok")
+  }
+
+  public cancel() {
+    this.myModal.hide();
+    this.DialogResult.emit("cancel");
+    console.log("cancel")
+  }
+
+  public show() {
+    this.myModal.show();
+    console.log("show")
+  }
+
+  public onhideDialog() {
+    console.log("onhide")
+  }
+
+  ngOnInit() {
+
+    console.log("myModal inti");
+  }
+
+  ngAfterViewInit() {
+    this.myModal.config.backdrop = false;
+    console.log("myModal view init");
   }
 }

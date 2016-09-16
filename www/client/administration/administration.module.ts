@@ -17,7 +17,7 @@ import { AuditLogComponent } from './auditlog.component';
     ReactiveFormsModule,
     routing,
     Ng2BootstrapModule,
-    AgGridModule
+    AgGridModule.forRoot(),
   ],
   declarations: [    
     SettingComponent,   
