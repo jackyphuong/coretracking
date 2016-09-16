@@ -68,16 +68,18 @@
                             </div>
                         </tab>
                         <!--Security tab-->
-                        <tab heading="Security">
+                        <tab heading="Security">                            
                             <h5>Password Complexity</h5>
-                            <form class="form-horizontal">
+                            <form [formGroup]="securityForm" class="form-horizontal">
                                 <div class="form-group">
                                     <label class="form-control-label" for="minPasswordLengthInput">Minimum password length</label>
-                                    <input type="text" class="form-control" id="minPasswordLengthInput">
+                                    <input type="text" class="form-control" formControlName="minPasswordLength">
                                 </div>
+
+
                                 <div class="form-group">
                                     <label class="form-control-label" for="maxPasswordLengthInput">Maximum password length</label>
-                                    <input type="text" class="form-control" id="maxPasswordLengthInput">
+                                    <input type="text" class="form-control" formControlName="maxPasswordLength">
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -96,7 +98,7 @@
                                 </div>
                             </form>
                             <div class="form-actions">
-                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                <button type="submit" class="btn btn-primary" (click)="onSubmit(securityForm.value)" [disabled]="!securityForm.valid">Save changes</button>
                                 <button class="btn btn-default" type="button">Cancel</button>
                             </div>
                         </tab>

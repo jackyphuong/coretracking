@@ -1,7 +1,9 @@
 var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     ts = require('gulp-typescript'),
-    tsProject = ts.createProject('tsconfig.json'),
+    tsProject = ts.createProject('tsconfig.json',{
+        typescript: require('typescript')
+    }),
     runSequence = require("run-sequence"),
     rimraf = require('gulp-rimraf'),
     sass = require('gulp-sass'),
@@ -58,6 +60,8 @@ gulp.task("libs", () => {
         'angular2-in-memory-web-api/**',
         'ng2-bootstrap/bundles/ng2-bootstrap.min.js',
         'ng2-bootstrap/bundles/ng2-bootstrap.min.js.map',
+        'ag-grid/**',
+        'ag-grid-ng2/**',
         'moment/moment.js'
     ], { cwd: "node_modules/**" }) /* Glob required here. */
         .pipe(gulp.dest("./dist/www/public/assests/libs"));
