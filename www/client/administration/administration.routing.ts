@@ -4,7 +4,7 @@ import { SettingComponent } from './setting.component';
 import { OrganizationUnitsComponent } from './organizationunits.component';
 import { RolesComponent } from './roles.component';
 import { AuditLogComponent } from './auditlog.component';
-import { UsersComponent } from './users.component';
+import { UsersComponent } from './user.component';
 
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [

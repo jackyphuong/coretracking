@@ -9,7 +9,7 @@ import { SettingComponent } from './setting.component';
 import { OrganizationUnitsComponent } from './organizationunits.component';
 import { RolesComponent } from './roles.component';
 import { AuditLogComponent } from './auditlog.component';
-import { UsersComponent } from './users.component';
+import { UsersComponent } from './user.component';
 
 @NgModule({
   imports: [
@@ -20,7 +20,7 @@ import { UsersComponent } from './users.component';
     Ng2BootstrapModule,
     AgGridModule.forRoot(),
   ],
-  declarations: [    
+  declarations: [
     SettingComponent,
     OrganizationUnitsComponent,
     RolesComponent,
