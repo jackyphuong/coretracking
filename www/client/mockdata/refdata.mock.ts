@@ -1,4 +1,4 @@
-export default class UserMock {
+export default class refdataMock {
 
     static firstNames = ["Sophie", "Isabelle", "Emily", "Olivia", "Lily", "Chloe", "Isabella",
         "Amelia", "Jessica", "Sophia", "Ava", "Charlotte", "Mia", "Lucy", "Grace", "Ruby",
@@ -63,4 +63,11 @@ export default class UserMock {
         '1207 Iron Extension, Klickitat, SC, 29197-8571, US, (803) 535-7888',
         '6770 Cinder Glen, Caronport, OH, 45053-5002, US, (440) 369-4018',
         '7619 Tawny Carrefour, Senlac, NV, 89529-9876, US, (775) 901-6433'];
+
+    static timezone = [
+        { value: '', display: 'Default [UTC]' },
+        { value: 'Dateline Standard Time', display: '(UTC-12:00) International Date Line West' },
+        { value: 'Dateline Standard Time', display: '(UTC-12:00) International Date Line West' },
+        { value: 'Hawaiian Standard Time', display: '(UTC-10:00) Hawaii' },
+    ];
 }

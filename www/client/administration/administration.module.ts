@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { CommonModule }  from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { Ng2BootstrapModule }           from 'ng2-bootstrap/ng2-bootstrap';
 import {AgGridModule} from 'ag-grid-ng2/main';
 
@@ -12,11 +13,11 @@ import { AuditLogComponent } from './auditlog.component';
 import { UsersComponent } from './user.component';
 
 @NgModule({
-  imports: [
+  imports: [    
     CommonModule,
+    routing,
     FormsModule,
     ReactiveFormsModule,
-    routing,
     Ng2BootstrapModule,
     AgGridModule.forRoot(),
   ],

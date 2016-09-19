@@ -1,7 +1,7 @@
 import { Component  } from '@angular/core';
 import {GridOptions} from 'ag-grid/main';
 
-import UserMock from '../mockdata/user.mock';
+import UserMock from '../mockdata/refdata.mock';
 
 @Component({
     selector: 'my-dashboard',
