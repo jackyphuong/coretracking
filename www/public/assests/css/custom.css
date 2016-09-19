@@ -29,3 +29,7 @@ header.navbar a.navbar-brand {
 .right{
   float:right;
 }
+
+.role table {
+  margin-top: 10px;
+}
