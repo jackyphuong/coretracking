@@ -1,5 +1,5 @@
-import { Component, ViewChild, OnInit, AfterViewInit, Output, EventEmitter  } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { Component, ViewChild, OnInit, AfterViewInit, Output, EventEmitter } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ModalDirective } from 'ng2-bootstrap/ng2-bootstrap';
 import { Role } from '../models/role';
 import { RoleService } from './roles.service';
@@ -11,8 +11,8 @@ import { RoleService } from './roles.service';
 })
 
 export class RolesComponent implements OnInit, AfterViewInit {
-  roles : Role[];
-  selectedRole : Role;
+  roles: Role[];
+  selectedRole: Role;
 
   @ViewChild(ModalDirective) myModal: ModalDirective;
   @Output('dialogResult') DialogResult: EventEmitter<string> = new EventEmitter<string>();
@@ -20,19 +20,40 @@ export class RolesComponent implements OnInit, AfterViewInit {
   constructor(private roleService: RoleService) {
     console.log("myModal constructor");
   }
+
+add(name: string): void {
+  name = name.trim();
+  if (!name) { return; }
+  this.roleService.create(name)
+    .then(role => {
+      this.roles.push(role);
+      this.selectedRole = null;
+    });
+}
+delete(role: Role): void {
+  this.roleService
+      .delete(role.id)
+      .then(() => {
+        this.roles = this.roles.filter(h => h !== role);
+        
+        if (this.selectedRole === role) { 
+          this.selectedRole = null; 
+        }
+      });
+}
   onSelect(role: Role): void {
     this.selectedRole = role;
   }
 
   getRoles(): void {
-     this.roleService.getRoles().then(roles => this.roles = roles);
+    this.roleService.getRoles().then(roles => this.roles = roles);
   }
 
 
 
 
 
-// Modal Methods
+  // Modal Methods
   public ok() {
     this.myModal.hide();
     this.DialogResult.emit("ok");
