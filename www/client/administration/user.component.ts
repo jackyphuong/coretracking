@@ -45,8 +45,8 @@ export class UsersComponent {
 
     private createColumnDefs() {
         this.columnDefs = [
-            { headerName: '#', width: 30, checkboxSelection: true, suppressSorting: true, suppressMenu: true,
-              pinned: true },
+            { headerName: '#', width: 30, suppressMenu: true, cellRenderer: avatarCellRender,
+              headerClass: 'icon-people', pinned: true },
             {   headerName: "Name", field: "name", width: 145 },
             {   headerName: "Email", field: "email", width: 200 },
             {   headerName: "Address", field: "address", width: 400, filter: 'text' },
@@ -58,6 +58,7 @@ export class UsersComponent {
 
     private onReady() {
         console.log('onReady');
+        this.gridOptions.rowHeight = 50;
         this.calculateRowCount();
     }
 
@@ -89,4 +90,9 @@ function statusCellRenderer(params) {
 
     var status = "<span class='tag "+ map[params.data.status] +"'>" + params.data.status + "</span>";
     return status;
+}
+
+function avatarCellRender(params) {
+    var avatar = '<div class="avatar"><img src="assests/img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"><span class="avatar-status tag-success"></span></div>';
+    return avatar;
 }
